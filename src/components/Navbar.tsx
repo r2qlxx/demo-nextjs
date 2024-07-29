@@ -42,9 +42,8 @@ const Navbar = () => {
     if (path === "/") {
       return pathname === path;
     } else {
-      return pathname.startsWith(path);
+      return pathname === path;
     }
-    return true;
   }
 
   return (
@@ -68,7 +67,7 @@ const Navbar = () => {
           <Link href="/" className="ml-4 p-2">R2QLXX</Link>
         </div>
         {navLinks.map(navLink =>
-          <Link key={navLink.name} href={navLink.path} className={`p-2 border-b-4 border-transparent ${isLinkActive(navLink.path) && "border-blue-500"} hover:border-orange-500 hover:scale-110 transition-all`} onClick={() => handleNavLink(navLink.path)}>
+          <Link key={navLink.name} href={navLink.path} className={`p-2 ${isLinkActive(navLink.path) && "border-b-4 border-blue-500"} hover:border-orange-500 hover:scale-110 transition-all`} onClick={() => handleNavLink(navLink.path)}>
             {navLink.name.toLocaleUpperCase()}
           </Link>
         )}
