@@ -32,7 +32,7 @@ const SingleNews = async ({ params }: { params: { slug: string } }) => {
           <CustomIcon Icon={BsArrowLeft} style="text-2xl cursor-pointer p-2 rounded-full hover:bg-gray-50" />
         </Link>
         <div className="flex flex-col gap-12 p-2">
-          <p className="text-sm text-end">DD/MM/YYYY</p>
+          <p className="text-sm text-end">MM/DD/YYYY</p>
           <div className="flex items-center gap-4">
             <CustomIcon Icon={BsPersonCircle} style="text-2xl text-blue-500" />
             <p>{user.name}</p>
